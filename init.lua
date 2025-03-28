@@ -8,4 +8,4 @@ require("dylan.plugins.telescope")
 require("dylan.plugins.nvim-cmp")
 require("dylan.plugins.nvim-tree")
 
-require("diffview").setup({})
+require("diffview").setup({debug_mode = true,})
