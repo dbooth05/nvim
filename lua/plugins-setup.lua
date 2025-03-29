@@ -31,9 +31,13 @@ return packer.startup(function(use)
 	--packer can manage itself
 	use("wbthomason/packer.nvim")
 
-	use("nvim-lua/plenary.nvim")
+	use("nvim-lua/plenary.nvim") -- required dependency for many things
+
+    use{ "catppuccin/nvim", as="catppuccin" } -- color theme
 
     use("szw/vim-maximizer") -- max current window
+
+    use("numToStr/Comment.nvim") -- comments using gc
 
 	use({
 		"nvim-tree/nvim-web-devicons",
@@ -45,7 +49,7 @@ return packer.startup(function(use)
 		end,
 	}) -- icons
 
-	use({
+	use({   -- autocloses (), {}, [], '', "", ...
 		"m4xshen/autoclose.nvim",
 		config = function()
 			require("autoclose").setup()

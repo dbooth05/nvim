@@ -1,11 +1,16 @@
-require("dylan.plugins-setup")
+require("plugins-setup")
 
 -- setting up options
-require("dylan.core.options")
+require("core.options")
+require("core.keymaps")
+require("core.colorscheme")
 
-require("dylan.plugins.nvim-web-devicons")
-require("dylan.plugins.telescope")
-require("dylan.plugins.nvim-cmp")
-require("dylan.plugins.nvim-tree")
+
+require("plugins.nvim-web-devicons")
+require("plugins.telescope")
+require("plugins.nvim-cmp")
+require("plugins.nvim-tree")
+
+require("plugins.lsp.lspconfig")
 
 require("diffview").setup({debug_mode = true,})
