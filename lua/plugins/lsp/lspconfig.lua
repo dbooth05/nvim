@@ -53,8 +53,6 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
-local pcl_include_path = "/usr/include/pcl-1.14/"
-
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
   on_attach = on_attach,
@@ -72,7 +70,6 @@ lspconfig["clangd"].setup({
     "--all-scopes-completion",
     "--pch-storage=memory",
     "--compile-commands-dir=build" .. vim.fn.getcwd() .. "/build", -- Cmake stuff
-    -- "-I", pcl_include_path, -- maybe fix for pcl stuff
     },
 })
 
