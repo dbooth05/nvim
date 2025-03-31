@@ -4,7 +4,7 @@ if not setup then
 end
 
 devicons.setup({
-	color_icons 	= true,
-	default 	= true,
-	strict		= true,
+	color_icons = true,
+	default = true,
+	strict = true,
 })

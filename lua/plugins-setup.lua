@@ -39,15 +39,11 @@ return packer.startup(function(use)
 
     use("numToStr/Comment.nvim") -- comments using gc
 
-	use({
-		"nvim-tree/nvim-web-devicons",
-		config = function()
-			require("nvim-web-devicons").setup({
-				override = {},
-				default = true,
-			})
-		end,
-	}) -- icons
+	use("nvim-tree/nvim-web-devicons")
+
+    --use("echasnovski/mini.icons") -- mini.icons plugin
+
+    use("stevearc/oil.nvim") -- oil plugin for creating files...
 
 	use({   -- autocloses (), {}, [], '', "", ...
 		"m4xshen/autoclose.nvim",
@@ -71,8 +67,18 @@ return packer.startup(function(use)
 	use("rafamadriz/friendly-snippets") -- useful snippet
 
 	-- manage & install lsp servers, linters, & formatters
-	use("williamboman/mason.nvim") -- in charge of managing lsp server, linter, & formatter
+	use {
+        "williamboman/mason.nvim",
+        config = function()
+            require("mason").setup()
+        end
+    }
 	use("williamboman/mason-lspconfig.nvim") -- bridge gap b/w mason & lspconfig
+
+    -- terminal build into nvim
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
 
 	-- config lsp server
 	use("neovim/nvim-lspconfig") -- easily config lang server

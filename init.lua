@@ -10,7 +10,9 @@ require("plugins.nvim-web-devicons")
 require("plugins.telescope")
 require("plugins.nvim-cmp")
 require("plugins.nvim-tree")
+--require("plugins.oil")
+require("plugins.toggleterm")
 
+require("plugins.lsp.mason")
+require("plugins.lsp.lspsaga")
 require("plugins.lsp.lspconfig")
-
-require("diffview").setup({debug_mode = true,})
