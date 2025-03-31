@@ -41,6 +41,8 @@ return packer.startup(function(use)
 
 	use("nvim-tree/nvim-web-devicons")
 
+    use("nvim-tree/nvim-tree.lua") -- file explorer
+
     --use("echasnovski/mini.icons") -- mini.icons plugin
 
     use("stevearc/oil.nvim") -- oil plugin for creating files...
