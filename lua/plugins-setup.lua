@@ -43,6 +43,8 @@ return packer.startup(function(use)
 
     use("nvim-tree/nvim-tree.lua") -- file explorer
 
+    use("nvim-lualine/lualine.nvim") -- better status bar (bottom)
+
     --use("echasnovski/mini.icons") -- mini.icons plugin
 
     use("stevearc/oil.nvim") -- oil plugin for creating files...
@@ -64,7 +66,12 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path") -- source for file system paths
 
 	--snippets
-	use("L3MON4D3/LuaSnip") -- snippet engine
+	use({
+        "L3MON4D3/LuaSnip",
+        config = function()
+            enable_jsregexp = true
+        end
+    }) -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippet
 
