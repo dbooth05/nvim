@@ -69,7 +69,9 @@ return packer.startup(function(use)
 	use({
         "L3MON4D3/LuaSnip",
         config = function()
-            enable_jsregexp = true
+           require("luasnip").config.set_config({
+               enable_jsregexp = true
+           })
         end
     }) -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
