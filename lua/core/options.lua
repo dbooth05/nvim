@@ -21,3 +21,4 @@ opt.tabstop = 4		-- number of spaces that a tab counts for
 opt.softtabstop = 4	-- helps maintain spaces when pressing tab
 
 
+opt.number = true -- line number
